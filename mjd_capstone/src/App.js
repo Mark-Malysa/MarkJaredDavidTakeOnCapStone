@@ -37,14 +37,14 @@ function App() {
 <button>Add Car</button>
 <button>Delete Car</button>
 
-<button onClick= {checkingButton}>Open Map</button>
+<button ><a href="map.html" target="_blank"> Open Map </a></button>
 
     </div>
   );
 }
 
 function checkingButton(){
-  console.log("Working");
+  
 }
 
 export default App;
