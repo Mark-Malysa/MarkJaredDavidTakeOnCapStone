@@ -1,5 +1,8 @@
 //import Button from 'react-bootstrap/Button';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import './App.css';
+import Map from './Map';
 
 function App() {
   return (
@@ -37,14 +40,17 @@ function App() {
 <button>Add Car</button>
 <button>Delete Car</button>
 
-<button ><a href="map.html" target="_blank"> Open Map </a></button>
+<button onClick= {checkingButton}>open Map</button>
 
     </div>
   );
 }
 
 function checkingButton(){
-  
+  ReactDOM.render(
+    <Map/>,
+    document.getElementById('root')
+  );
 }
 
 export default App;
