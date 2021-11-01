@@ -5,7 +5,9 @@ import App from './App.js';
 function Map() {
   return (
     <div>
-    <h1>hello</h1>
+
+    <img src='src/prototype_map.png' alt="Map"></img>
+
     <button onClick= {closeMap}>Close map</button>
     </div>
   );
