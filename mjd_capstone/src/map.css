@@ -1,0 +1,15 @@
+img{
+    max-width: 900px;
+    max-height: 900px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.close{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

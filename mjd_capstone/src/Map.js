@@ -2,14 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App.js';
 import map from './prototype_map.png';
+import './map.css'
 
 function Map() {
   return (
     <div>
 
-    <img src={map}alt="Map"></img>
+    <img src={map} classname="mapImage" alt="Map"></img>
 
-    <button onClick= {closeMap}>Close map</button>
+    <button class="close "onClick= {closeMap}>Close map</button>
     </div>
   );
 }
