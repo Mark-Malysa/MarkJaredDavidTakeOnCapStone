@@ -40,13 +40,13 @@ function App() {
 <button>Add Car</button>
 <button>Delete Car</button>
 
-<button onClick= {checkingButton}>open Map</button>
+<button onClick= {openMap}>open Map</button>
 
     </div>
   );
 }
 
-function checkingButton(){
+function openMap(){
   ReactDOM.render(
     <Map/>,
     document.getElementById('root')
