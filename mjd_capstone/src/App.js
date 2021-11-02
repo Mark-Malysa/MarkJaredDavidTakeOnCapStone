@@ -6,7 +6,6 @@ import Map from './Map';
 import { Container } from './Container';
 
 function App() {
-  const addCarText = 'Add Car'
   return (
     <div className="App">
       <table>
@@ -39,7 +38,7 @@ function App() {
 </table>
 
 
-<Container triggerText={addCarText} onSubmit={addCar} />
+<Container triggerText={"Add Car"} onSubmit={addCar} />
 
 <button>Delete Car</button>
 
