@@ -3,8 +3,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './App.css';
 import Map from './Map';
+import { Container } from './Container';
 
 function App() {
+  const addCarText = 'Add Car'
   return (
     <div className="App">
       <table>
@@ -37,7 +39,8 @@ function App() {
 </table>
 
 
-<button>Add Car</button>
+<Container triggerText={addCarText} onSubmit={addCar} />
+
 <button>Delete Car</button>
 
 <button onClick= {openMap}>open Map</button>
@@ -45,6 +48,13 @@ function App() {
     </div>
   );
 }
+
+const addCar = (event) => {
+  event.preventDefault(event);
+  console.log(event.target.make_model.value);
+  console.log(event.target.vin.value);
+  console.log(event.target.location.value);
+};
 
 function openMap(){
   ReactDOM.render(
