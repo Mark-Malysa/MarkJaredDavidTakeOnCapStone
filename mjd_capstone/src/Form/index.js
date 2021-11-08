@@ -1,4 +1,5 @@
 import React from "react";
+import './formindex.css';
 
 export const Form = ({ onSubmit }) => {
   const [checked, setChecked] = React.useState(true);
