@@ -50,9 +50,7 @@ function App() {
 
 const addCar = (event) => {
   event.preventDefault(event);
-  console.log(event.target.make_model.value);
-  console.log(event.target.vin.value);
-  console.log(event.target.location.value);
+  alert(event.target.make_model.value +'\n' + event.target.vin.value + '\n' + event.target.location.value);
 };
 
 function openMap(){
