@@ -1,7 +1,7 @@
 import React from "react";
 
 export const Form = ({ onSubmit }) => {
-  const [checked, setChecked] = React.useState(false);
+  const [checked, setChecked] = React.useState(true);
   const handleChange = () => {
     setChecked(!checked);
   }
@@ -13,7 +13,7 @@ export const Form = ({ onSubmit }) => {
       </label>
     );
   };
-  
+
   return (
     <form onSubmit={onSubmit}>
       <div className="form-group">
