@@ -1,6 +1,19 @@
 import React from "react";
 
 export const Form = ({ onSubmit }) => {
+  const [checked, setChecked] = React.useState(false);
+  const handleChange = () => {
+    setChecked(!checked);
+  }
+  const Checkbox = ({ label, value, onChange }) => {
+    return (
+      <label>
+        <input type="checkbox" checked={value} onChange={onChange} />
+        {label}
+      </label>
+    );
+  };
+  
   return (
     <form onSubmit={onSubmit}>
       <div className="form-group">
@@ -25,7 +38,14 @@ export const Form = ({ onSubmit }) => {
           id="location"
         />
       </div>
-      <div className="form-group">
+      <div>
+        <Checkbox
+          label="On site?"
+          value={checked}
+          onChange={handleChange}
+          />
+          </div>
+        <div className="form-group">
         <button className="form-control btn btn-primary" type="submit">
           Submit
         </button>
