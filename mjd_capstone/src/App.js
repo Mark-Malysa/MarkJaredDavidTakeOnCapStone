@@ -4,14 +4,14 @@ import ReactDOM from 'react-dom';
 import './App.css';
 import Map from './Map';
 import { Container } from './Container';
-var carList = [];
+let carList = [];
 
 class App extends Component{
   render() {
+
     const addCar = (event) => {
       event.preventDefault(event);  
       carList.push({make_model:event.target.make_model.value, vin:parseInt(event.target.vin.value), location:event.target.vin.value});
-      alert(carList);
       this.forceUpdate();
     };
     
