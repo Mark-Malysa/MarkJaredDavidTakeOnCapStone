@@ -46,7 +46,7 @@ export const Form = ({ onSubmit }) => {
           onChange={handleChange}
           />
           </div>
-        <div className="form-group">
+      <div className="form-group">
         <button className="form-control btn btn-primary" type="submit">
           Submit
         </button>
