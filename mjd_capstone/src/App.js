@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom';
 import './App.css';
 import Map from './Map';
 import { Container } from './Container';
+import NavBar from "./NavBar"
+
 let carList = [];
 
 class App extends Component{
@@ -24,6 +26,7 @@ class App extends Component{
 
     return(
       <div className="App">
+        <NavBar/>
         <table>
           <tr>
             <th>Make/Model</th>
