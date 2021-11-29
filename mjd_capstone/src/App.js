@@ -5,6 +5,7 @@ import './App.css';
 import Map from './Map';
 import { Container } from './Container';
 import NavBar from "./NavBar"
+import 'materialize-css/dist/css/materialize.min.css';
 
 let carList = [];
 

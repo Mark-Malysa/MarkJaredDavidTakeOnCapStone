@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App.js';
 import './NavBar.css'
+import 'materialize-css/dist/css/materialize.min.css';
 
  
 const Navbar = () => {
