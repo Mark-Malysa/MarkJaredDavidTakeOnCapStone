@@ -13,18 +13,20 @@ const Navbar = () => {
         <a href="/" class="brand-logo">Paul Miller INC.</a>
         <a href="/" data-target="mobile-nav" class="sidenav-trigger"></a>
         <ul id="desktop-nav" class="right hide-on-med-and-down">
-          <li>Events</li>
-          <li>Attendees</li>
-          <li>Projects</li>
+          <li>Home</li>
+          <li>Map</li>
+          <li>Move Car???</li>
+          <li>Adminstrative Mode (Only visible after sign in for certain accounts)</li>
           <li class="btn">Login / Register</li>
         </ul>
       </div>
     </nav>
     <ul id="mobile-nav" class="sidenav">
-      <li>Events</li>
-      <li>Attendees</li>
-      <li>Projects</li>
-      <li class="btn">Login / Register</li>
+      <li>Home</li>
+      <li>Map</li>
+      <li>Move Car???</li>
+      <li>Adminstrative Mode (Only visible after sign in for certain accounts)</li>
+      <li class="btn">Login</li>
     </ul>
   </header>
    )
