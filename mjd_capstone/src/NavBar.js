@@ -10,7 +10,7 @@ const Navbar = () => {
     <header>
     <nav>
       <div class="nav-wrapper">
-        <a href="/" class="brand-logo">HackBCA 20XX</a>
+        <a href="/" class="brand-logo">Paul Miller INC.</a>
         <a href="/" data-target="mobile-nav" class="sidenav-trigger"></a>
         <ul id="desktop-nav" class="right hide-on-med-and-down">
           <li>Events</li>
