@@ -2,3 +2,11 @@ tr {
   border-color: black;
   background-color: grey;
 }
+
+button.listedButton{
+  align-self: center;
+  margin: auto;
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+  margin: transparent;
+}

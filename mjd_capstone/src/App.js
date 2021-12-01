@@ -37,12 +37,14 @@ class App extends Component{
             <th>Make/Model</th>
             <th>Location</th>
             <th>Vin</th>
+            <th></th>
           </tr>
           {carList.map((car =>
           <tr>
             <th>{car.make_model}</th>
             <th>{car.location}</th>
             <th>{car.vin}</th>
+            <th><button class="listedButton">Show on Map</button></th>
           </tr>
           ))}
         </table>
