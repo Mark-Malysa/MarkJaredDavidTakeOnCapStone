@@ -26,8 +26,12 @@ class App extends Component{
     }
 
     return(
+      <div>
+      <div>
+      <NavBar/>
+      </div>
       <div className="App">
-        <NavBar/>
+       
         <table>
           <tr>
             <th>Make/Model</th>
@@ -49,6 +53,7 @@ class App extends Component{
 
         <button onClick= {openMap}>open Map</button>
 
+      </div>
       </div>
     );
   }
