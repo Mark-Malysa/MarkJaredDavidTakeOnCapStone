@@ -34,6 +34,16 @@ html {
     background-color: #1e88e5; 
   }
   
+  button.navigate{
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border: transparent;
+    background-color: transparent;
+    width: max-content;
+    height: 100%;
+  }
   button.info{
     background-color:  #90caf9;
     border: transparent;
