@@ -2,10 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App.js';
 import './NavBar.css'
+import Map from './Map';
 import 'materialize-css/dist/css/materialize.min.css';
 
  
 const Navbar = () => {
+
+  const openMap = (event) => {
+    console.log(event);
+    ReactDOM.render(
+      <Map/>,
+      document.getElementById('root')
+    );
+  }
    return(
     <header>
     <nav>
@@ -14,7 +23,7 @@ const Navbar = () => {
         <a href="/" data-target="mobile-nav" class="sidenav-trigger"></a>
         <ul id="desktop-nav" class="right hide-on-med-and-down">
           <li><button class="navigate">Home</button> </li>
-          <li><button class="navigate">Map</button></li>
+          <li><button class="navigate" onClick={openMap} >Map</button></li>
           <li><button class="navigate">Adminstrative Mode (Only visible after sign in for certain accounts)</button></li>
           <li class="btn">Login</li>
         </ul>

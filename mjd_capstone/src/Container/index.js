@@ -31,7 +31,7 @@ export class Container extends Component {
     return (
       <React.Fragment>
         <TriggerButton
-          showModal={this.showModal}
+          showModal={!this.props.showModal ? this.showModal : this.props.showModal}
           buttonRef={(n) => (this.TriggerButton = n)}
           triggerText={this.props.triggerText}
         />
