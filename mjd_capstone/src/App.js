@@ -16,21 +16,21 @@ class App extends Component{
   render() {
 
     const addCar = (event) => {
-      event.preventDefault(event);  
+      event.preventDefault(event);
       //carList.push({make_model:event.target.make_model.value, vin:parseInt(event.target.vin.value), location:event.target.location.value});
       this.forceUpdate();
       carmap.set(event.target.vin.value, {make_model:event.target.make_model.value, location:event.target.location.value});
       console.log(carmap);
       this.forceUpdate();
-      
+
     };
 
     const deleteCar = (event) => {
-      event.preventDefault(event);  
+      event.preventDefault(event);
       carList.clear();
       this.forceUpdate();
     };
-    
+
     const openMap = (event) => {
       console.log(event);
       ReactDOM.render(
@@ -45,7 +45,7 @@ class App extends Component{
       <NavBar/>
       </div>
       <div className="App">
-       
+
         <table>
           <tr>
             <th>Action</th>
@@ -64,19 +64,13 @@ class App extends Component{
           </tr>
   })}
         </table>
-  
+
         <Container triggerText={"Add Car"} onSubmit={addCar} />
 
-<<<<<<< HEAD
         <Container triggerText={"Delete Car"} onsubmit={deleteCar}/>
 
         <Container triggerText={"Open Map"} showModal={openMap} />
-  
-=======
-        <button class="addDelete">Delete Car</button>
 
-        <button class="openMap" onClick= {openMap}>Open Map</button>
->>>>>>> 2af65c5ff892325f4cc1a2787ac5c0764fc5ef94
 
       </div>
       </div>
