@@ -25,7 +25,7 @@ const Navbar = () => {
           <li><button class="navigate">Home</button> </li>
           <li><button class="navigate" onClick={openMap} >Map</button></li>
           <li><button class="navigate">Adminstrative Mode (Only visible after sign in for certain accounts)</button></li>
-          <li class="btn">Login</li>
+          <li><button class="navigate">Login</button></li>
         </ul>
       </div>
     </nav>

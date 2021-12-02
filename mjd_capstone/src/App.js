@@ -67,10 +67,16 @@ class App extends Component{
   
         <Container triggerText={"Add Car"} onSubmit={addCar} />
 
+<<<<<<< HEAD
         <Container triggerText={"Delete Car"} onsubmit={deleteCar}/>
 
         <Container triggerText={"Open Map"} showModal={openMap} />
   
+=======
+        <button class="addDelete">Delete Car</button>
+
+        <button class="openMap" onClick= {openMap}>Open Map</button>
+>>>>>>> 2af65c5ff892325f4cc1a2787ac5c0764fc5ef94
 
       </div>
       </div>
