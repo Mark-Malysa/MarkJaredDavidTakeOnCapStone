@@ -12,6 +12,8 @@ import { Carousel } from 'materialize-css';
 
 let carList = [];
 let carmap = new Map();
+carmap.set(5424562089345, {make_model:"test", location: "test"})
+
 class App extends Component{
   render() {
 
@@ -20,7 +22,7 @@ class App extends Component{
       //carList.push({make_model:event.target.make_model.value, vin:parseInt(event.target.vin.value), location:event.target.location.value});
       this.forceUpdate();
       carmap.set(event.target.vin.value, {make_model:event.target.make_model.value, location:event.target.location.value});
-      console.log(carmap);
+      console.log(carmap)
       this.forceUpdate();
 
     };
@@ -54,15 +56,16 @@ class App extends Component{
             <th>Vin</th>
             <th></th>
           </tr>
-          {carmap.forEach((value) => {
-          <tr>
-            <td><ActionMenu/></td>
-            <td>{value.make_model}</td>
-            <td>{value.location}</td>
-            <td>234543</td>
-            <td><button class="listedButton">Show on Map</button></td>
-          </tr>
-  })}
+          {carmap.forEach((car, i) => {
+            <tr>
+            console.log('writing');
+              <td><ActionMenu/></td>
+              <td>{car.make_model}</td>
+              <td>{car.location}</td>
+              <td>{i}</td>
+              <td><button class="listedButton">Show on Map</button></td>
+            </tr>
+          })}
         </table>
 
         <Container triggerText={"Add Car"} onSubmit={addCar} />
