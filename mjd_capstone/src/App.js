@@ -51,9 +51,9 @@ class App extends Component{
           
         <Container triggerText={"Add Car"} onSubmit={addCar} />
 
-        <button>Delete Car</button>
+        <button class="addDelete">Delete Car</button>
 
-        <button onClick= {openMap}>open Map</button>
+        <button class="openMap" onClick= {openMap}>Open Map</button>
 
       </div>
       </div>
