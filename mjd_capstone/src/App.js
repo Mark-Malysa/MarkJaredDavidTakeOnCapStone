@@ -68,11 +68,11 @@ class App extends Component{
           })}
         </table>
 
-        <Container triggerText={"Add Car"} onSubmit={addCar} />
+        <Container class="restOfTriggerText" triggerText={"Add Car"} onSubmit={addCar} />
 
-        <Container triggerText={"Delete Car"} onsubmit={deleteCar}/>
+        <Container class="deleteCar" triggerText={"Delete Car"} onsubmit={deleteCar}/>
 
-        <Container triggerText={"Open Map"} showModal={openMap} />
+        <Container class="restofTriggerText" triggerText={"Open Map"} showModal={openMap} />
 
 
       </div>

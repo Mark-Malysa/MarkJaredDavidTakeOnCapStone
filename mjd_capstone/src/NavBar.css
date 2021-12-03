@@ -37,12 +37,16 @@ html {
   button.navigate{
     margin-left: 5px;
     margin-right: 5px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 15px 32px;
     border: transparent;
     background-color: transparent;
     width: max-content;
     height: 100%;
+  }
+  button.navigate:hover {
+    background-color: lightgray;
   }
   button.info{
     background-color:  #90caf9;

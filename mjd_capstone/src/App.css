@@ -15,7 +15,7 @@ button.listedButton{
   background-color: transparent;
   margin: transparent;
 }
-button.addDelete{
+button.restOfTriggerText{
   background-color: white; /* Red for delete! */
   border: 2px solid black;
   color: black;
