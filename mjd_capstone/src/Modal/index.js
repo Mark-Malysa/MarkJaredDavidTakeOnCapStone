@@ -37,16 +37,9 @@ export const Modal = ({
               <path d="M 10,10 L 30,30 M 30,10 L 10,30" />
             </svg>
           </button>
-          if (this.class === "addcar"){
-            <div className="modal-body">
-            <LoginForm onSubmit={onSubmit} />
-            </div>
-          }
-          else if (this.class === "login"){
-            <div className="modal-body">
+          <div className="modal-body">
             <AddCarForm onSubmit={onSubmit} />
-            </div>
-          }
+          </div>
         </div>
       </aside>
     </FocusTrap>,
