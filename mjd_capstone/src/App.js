@@ -8,7 +8,6 @@ import NavBar from "./NavBar"
 import 'materialize-css/dist/css/materialize.min.css';
 import ActionMenu from './ActionMenu'
 
-
 let carList = [];
 let carmap = new Map();
 carmap.set(5424562089345, {make_model:"test", location: "test"})
@@ -71,7 +70,6 @@ class App extends Component{
         <Container class="deleteCar" triggerText={"Delete Car"} onsubmit={deleteCar}/>
 
         <Container class="restofTriggerText" triggerText={"Open Map"} showModal={openMap} />
-
 
       </div>
       </div>

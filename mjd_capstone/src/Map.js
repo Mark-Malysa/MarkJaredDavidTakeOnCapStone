@@ -3,14 +3,13 @@ import ReactDOM from 'react-dom';
 import App from './App.js';
 import map from './prototype_map.png';
 import './map.css'
+import Navbar from './NavBar.js';
 
 function Map() {
   return (
     <div>
-
-    <img src={map} classname="mapImage" alt="Map"></img>
-
-    <button class="close "onClick= {closeMap}>Close map</button>
+      <Navbar/>
+      <img src={map} classname="mapImage" alt="Map"></img>
     </div>
   );
 }

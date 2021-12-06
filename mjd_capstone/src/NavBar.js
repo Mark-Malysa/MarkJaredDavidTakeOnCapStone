@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Container } from './Container';
 import './NavBar.css'
+import App from './App';
 import ParkingMap from './Map';
+import CompleteHistory from './CompleteHistory'
 import 'materialize-css/dist/css/materialize.min.css';
 
 let logins = new Map();
@@ -12,7 +14,7 @@ logins.set("user", {password:"user", isAdmin:false});
 const Navbar = () => {
 
   const openMap = (event) => {
-    console.log(event);
+    event.preventDefault(event)
     ReactDOM.render(
       <ParkingMap/>,
       document.getElementById('root')
@@ -30,6 +32,22 @@ const Navbar = () => {
     }
   }
 
+  const openHistory = (event) => {
+    event.preventDefault(event)
+    ReactDOM.render(
+      <CompleteHistory/>,
+      document.getElementById('root')
+    );
+  }
+
+  const goHome = (event) => {
+    event.preventDefault(event)
+    ReactDOM.render(
+      <App/>,
+      document.getElementById('root')
+    );
+  }
+
    return(
     <header>
     <nav>
@@ -37,9 +55,9 @@ const Navbar = () => {
         <a href="/" class="brand-logo">Paul Miller INC.</a>
         <a href="/" data-target="mobile-nav" class="sidenav-trigger"></a>
         <ul id="desktop-nav" class="right hide-on-med-and-down">
-          <li><button class="navigate">Home</button> </li>
+          <li><button class="navigate" onClick={goHome}>Home</button> </li>
           <li><button class="navigate" onClick={openMap} >Map</button></li>
-          <li><button class="navigate">Adminstrative Mode (Only visible after sign in for certain accounts)</button></li>
+          <li><button class="navigate" onClick={openHistory}>Show Edit History (Administrative mode only)</button></li>
           <li><Container class="login" triggerText="Login" onSubmit={login}/></li>
         </ul>
       </div>
@@ -48,7 +66,7 @@ const Navbar = () => {
       <li>Home</li>
       <li>Map</li>
       <li>Move Car???</li>
-      <li>Adminstrative Mode (Only visible after sign in for certain accounts)</li>
+      <li>Show Edit History (Administrative mode only)</li>
       <li class="btn">Login</li>
     </ul>
   </header>
