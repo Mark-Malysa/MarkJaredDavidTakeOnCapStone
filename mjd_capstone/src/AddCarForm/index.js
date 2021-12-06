@@ -1,7 +1,7 @@
 import React from "react";
 import './formindex.css';
 
-export const Form = ({ onSubmit }) => {
+export const AddCarForm = ({ onSubmit }) => {
   const [checked, setChecked] = React.useState(true);
   const handleChange = () => {
     setChecked(!checked);
@@ -21,7 +21,7 @@ export const Form = ({ onSubmit }) => {
         <label htmlFor="Make and Model">Make and Model</label>
         <input 
         className="form-control" 
-        id="username"
+        id="make_model"
         placeholder="Audi A4 (2012)"
          />
       </div>
@@ -29,7 +29,7 @@ export const Form = ({ onSubmit }) => {
         <label htmlFor="vin">VIN</label>
         <input
           className="form-control"
-          id="password"
+          id="vin"
         />
       </div>
       <div className="form-group">
@@ -54,4 +54,4 @@ export const Form = ({ onSubmit }) => {
     </form>
   );
 };
-export default Form;
+export default AddCarForm;

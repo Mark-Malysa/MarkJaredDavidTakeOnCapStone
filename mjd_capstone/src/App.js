@@ -66,7 +66,7 @@ class App extends Component{
           })}
         </table>
 
-        <Container class="restOfTriggerText" triggerText={"Add Car"} onSubmit={addCar} />
+        <Container class="addCar" triggerText={"Add Car"} onSubmit={addCar} />
 
         <Container class="deleteCar" triggerText={"Delete Car"} onsubmit={deleteCar}/>
 
