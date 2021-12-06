@@ -27,6 +27,7 @@ html {
   }
   nav .btn:hover, .sidenav .btn:hover{
     background-color: #f4511e; /*deep-orange darken-1*/
+    cursor: pointer;
   }
   
   /* footer */
@@ -47,6 +48,7 @@ html {
   }
   button.navigate:hover {
     background-color: lightgray;
+    cursor: pointer;
   }
   button.info{
     background-color:  #90caf9;
@@ -55,5 +57,6 @@ html {
   
   button.info:hover{
     background-color: #1e88e5;
+    cursor: pointer;
   }
   
