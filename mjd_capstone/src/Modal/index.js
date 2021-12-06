@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { LoginForm } from '../LoginForm';
-import { AddCarForm } from '../AddCarForm';
+import { Form } from '../Form';
 import FocusTrap from 'focus-trap-react';
 export const Modal = ({
   onClickOutside,
@@ -38,7 +37,7 @@ export const Modal = ({
             </svg>
           </button>
           <div className="modal-body">
-            <AddCarForm onSubmit={onSubmit} />
+            <Form onSubmit={onSubmit} />
           </div>
         </div>
       </aside>
