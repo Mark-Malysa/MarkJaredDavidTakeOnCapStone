@@ -7,7 +7,6 @@ import { Container } from './Container';
 import NavBar from "./NavBar"
 import 'materialize-css/dist/css/materialize.min.css';
 import ActionMenu from './ActionMenu'
-import { Carousel } from 'materialize-css';
 
 
 let carList = [];

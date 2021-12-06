@@ -21,15 +21,15 @@ export const Form = ({ onSubmit }) => {
         <label htmlFor="Make and Model">Make and Model</label>
         <input 
         className="form-control" 
-        id="make_model"
+        id="username"
         placeholder="Audi A4 (2012)"
          />
       </div>
       <div className="form-group">
-        <label htmlFor="email">VIN</label>
+        <label htmlFor="vin">VIN</label>
         <input
           className="form-control"
-          id="vin"
+          id="password"
         />
       </div>
       <div className="form-group">

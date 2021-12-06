@@ -1,20 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App.js';
+import { Container } from './Container';
 import './NavBar.css'
-import Map from './Map';
+import ParkingMap from './Map';
 import 'materialize-css/dist/css/materialize.min.css';
 
+let logins = new Map();
+logins.set("admin", {password:"admin", isAdmin:true});
+logins.set("user", {password:"user", isAdmin:false});
  
 const Navbar = () => {
 
   const openMap = (event) => {
     console.log(event);
     ReactDOM.render(
-      <Map/>,
+      <ParkingMap/>,
       document.getElementById('root')
     );
   }
+
+  const login = (event) => {
+    event.preventDefault(event)
+    let attemptedUser = logins.get(event.target.username.value)
+    if (attemptedUser.password === event.target.password.value){
+      alert("Logged in as " + event.target.username.value)
+    }
+    else{
+      alert("Login failed")
+    }
+  }
+
    return(
     <header>
     <nav>
@@ -25,7 +40,7 @@ const Navbar = () => {
           <li><button class="navigate">Home</button> </li>
           <li><button class="navigate" onClick={openMap} >Map</button></li>
           <li><button class="navigate">Adminstrative Mode (Only visible after sign in for certain accounts)</button></li>
-          <li><button class="navigate">Login</button></li>
+          <li><Container class="login" triggerText="Login" onSubmit={login}/></li>
         </ul>
       </div>
     </nav>
