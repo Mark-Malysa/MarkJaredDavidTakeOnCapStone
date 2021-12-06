@@ -16,7 +16,6 @@ carmap.set(5424562089345, {make_model:"test", location: "test"})
 
 class App extends Component{
   render() {
-
     const addCar = (event) => {
       event.preventDefault(event);
       //carList.push({make_model:event.target.make_model.value, vin:parseInt(event.target.vin.value), location:event.target.location.value});
