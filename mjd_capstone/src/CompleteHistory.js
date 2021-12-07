@@ -4,9 +4,7 @@ import 'materialize-css/dist/css/materialize.min.css';
 import './App.css';
 import NavBar from "./NavBar"
 
-let editList = [{make_model:"Audi A4 (2004)", vin:2348723965623, old:"B6", new:"D4", time:"16:34"}];
-
-const CompleteHistory = () => {
+const CompleteHistory = (props) => {
     return (  
         <div>
         <div>
@@ -15,20 +13,24 @@ const CompleteHistory = () => {
         <div className="App">
             
             <table>
-            <tr>
-                <th>Make/Model</th>
+            <tr> 
+                <th>Edit Type</th>
+                <th>Car Make/Model</th>
                 <th>VIN</th>
-                <th>Moved From</th>
-                <th>Moved To</th>
-                <th>Moved At</th>
+                <th>Stock Number</th>
+                <th>Old Location</th>
+                <th>New Location</th>
+                <th>Time</th>
             </tr>
-            {editList.map((car =>
+            {props.edits.map((edit =>
             <tr>
-                <th>{car.make_model}</th>
-                <th>{car.vin}</th>
-                <th>{car.old}</th>
-                <th>{car.new}</th>
-                <th>{car.time}</th>
+                <td>{edit.type}</td>
+                <td>{edit.make_model}</td>
+                <td>{edit.key}</td>
+                <td>{edit.stockNum}</td>
+                <td>{edit.old}</td>
+                <td>{edit.location}</td>
+                <td>{edit.time}</td>
             </tr>
             ))}
             </table>

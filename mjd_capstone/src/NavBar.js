@@ -5,13 +5,14 @@ import './NavBar.css'
 import App from './App';
 import ParkingMap from './Map';
 import CompleteHistory from './CompleteHistory'
+import Login from './Login'
 import 'materialize-css/dist/css/materialize.min.css';
 
 let logins = new Map();
 logins.set("admin", {password:"admin", isAdmin:true});
 logins.set("user", {password:"user", isAdmin:false});
  
-const Navbar = () => {
+const Navbar = (props) => {
 
   const openMap = (event) => {
     event.preventDefault(event)
@@ -21,21 +22,10 @@ const Navbar = () => {
     );
   }
 
-  const login = (event) => {
-    event.preventDefault(event)
-    let attemptedUser = logins.get(event.target.username.value)
-    if (attemptedUser.password === event.target.password.value){
-      alert("Logged in as " + event.target.username.value)
-    }
-    else{
-      alert("Login failed")
-    }
-  }
-
   const openHistory = (event) => {
     event.preventDefault(event)
     ReactDOM.render(
-      <CompleteHistory/>,
+      <CompleteHistory edits={props.edits}/>,
       document.getElementById('root')
     );
   }
@@ -44,6 +34,14 @@ const Navbar = () => {
     event.preventDefault(event)
     ReactDOM.render(
       <App/>,
+      document.getElementById('root')
+    );
+  }
+
+  const logOut = (event) => {
+    event.preventDefault(event)
+    ReactDOM.render(
+      <Login/>,
       document.getElementById('root')
     );
   }
@@ -58,7 +56,7 @@ const Navbar = () => {
           <li><button class="navigate" onClick={goHome}>Home</button> </li>
           <li><button class="navigate" onClick={openMap} >Map</button></li>
           <li><button class="navigate" onClick={openHistory}>Show Edit History (Administrative mode only)</button></li>
-          <li><Container class="login" triggerText="Login" onSubmit={login}/></li>
+          <li class="btn" onClick={logOut}>Log Out</li>
         </ul>
       </div>
     </nav>
@@ -67,7 +65,7 @@ const Navbar = () => {
       <li>Map</li>
       <li>Move Car???</li>
       <li>Show Edit History (Administrative mode only)</li>
-      <li class="btn">Login</li>
+      <li class="btn" onClick={logOut}>Log Out</li>
     </ul>
   </header>
    )
