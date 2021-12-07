@@ -15,6 +15,13 @@ let edits = [];
 
 class App extends Component{
   render() {
+
+    const handleDelete = (key) => {
+      carList = carList.filter(car => car.key !== key);
+      this.forceUpdate();
+    }
+
+
     const addCar = (event) => {
       event.preventDefault(event);
       //carList.push({make_model:event.target.make_model.value, vin:parseInt(event.target.vin.value), location:event.target.location.value});
@@ -54,7 +61,9 @@ class App extends Component{
           {carList.map((car =>
           
           <tr key= {car.key}>
-            <td><ActionMenu/></td>
+            <td>
+              <button onClick={() => handleDelete(car.key)}>Delete Car</button>
+            </td>
             <td>{car.make_model}</td>
             <td>{car.newSpot}</td>
             <td>{car.key}</td>
