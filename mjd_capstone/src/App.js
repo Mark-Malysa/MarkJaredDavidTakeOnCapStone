@@ -7,6 +7,7 @@ import { Container } from './Container';
 import NavBar from "./NavBar"
 import 'materialize-css/dist/css/materialize.min.css';
 import ActionMenu from './ActionMenu';
+import CompleteHistory from './CompleteHistory';
 
 
 let carList = [];
@@ -68,7 +69,7 @@ class App extends Component{
           {carList.map((car =>
           
           <tr key= {car.key}>
-            <td>Action Menu</td>
+            <td><ActionMenu/></td>
             <td>{car.make_model}</td>
             <td>{car.newSpot}</td>
             <td>{car.key}</td>
