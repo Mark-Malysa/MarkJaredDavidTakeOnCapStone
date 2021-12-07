@@ -39,6 +39,13 @@ export const Form = ({ onSubmit }) => {
           id="location"
         />
       </div>
+      <div className="form-group">
+        <label htmlFor="stockNumber">Stock Number</label>
+        <input
+          className="form-control"
+          id="stockNumber"
+        />
+      </div>
       <div>
         <Checkbox
           label="On site?"
