@@ -16,10 +16,10 @@ class Login extends Component{
         return(
             <form onSubmit={checkLogin}>
                 <label>
-                    <input type="text" name="username" placeholder="Username" />
+                    <input type="email" name="username" placeholder="Username" />
                 </label>
                 <label>
-                    <input type="text" name="password" placeholder="Password"/>
+                    <input type="password" name="password" placeholder="Password"/>
                 </label>
 
                 <input type="submit" value="Submit" />
