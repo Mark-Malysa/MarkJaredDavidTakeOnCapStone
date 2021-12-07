@@ -16,8 +16,22 @@ let edits = [];
 class App extends Component{
   render() {
 
-    const handleDelete = (key) => {
-      carList = carList.filter(car => car.key !== key);
+    const handleDelete = (car) => {
+      for(var i = 0; i < carList.length; i++){ 
+        if (carList[i] === car) { 
+            carList.splice(i, 1); 
+        }
+      } 
+      let edit = {
+        type: "Delete Car",
+        key: car.key,
+        make_model: car.make_model,
+        stockNum: car.stockNumber,
+        newSpot: "N/A",
+        oldSpot: car.newSpot,
+        time: Date().toLocaleString()
+      };
+      edits.unshift(edit)
       this.forceUpdate();
     }
 
@@ -25,7 +39,7 @@ class App extends Component{
     const addCar = (event) => {
       event.preventDefault(event);
       //carList.push({make_model:event.target.make_model.value, vin:parseInt(event.target.vin.value), location:event.target.location.value});
-      let listEdit = {
+      let edit = {
         type: "New Car",
         key: event.target.vin.value,
         make_model: event.target.make_model.value,
@@ -34,10 +48,8 @@ class App extends Component{
         oldSpot: "N/A",
         time: Date().toLocaleString()
       };
-      console.log(listEdit);
-      carList.push(listEdit);
-      edits.push(listEdit);
-      console.log(carList);
+      carList.push(edit);
+      edits.unshift(edit);
       this.forceUpdate();
 
     };
@@ -62,7 +74,7 @@ class App extends Component{
           
           <tr key= {car.key}>
             <td>
-              <button onClick={() => handleDelete(car.key)}>Delete Car</button>
+              <button onClick={() => handleDelete(car)}>Delete Car</button>
             </td>
             <td>{car.make_model}</td>
             <td>{car.newSpot}</td>
