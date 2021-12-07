@@ -15,7 +15,6 @@ let edits = [];
 
 class App extends Component{
   render() {
-
     const addCar = (event) => {
       event.preventDefault(event);
       //carList.push({make_model:event.target.make_model.value, vin:parseInt(event.target.vin.value), location:event.target.location.value});
@@ -35,20 +34,6 @@ class App extends Component{
       this.forceUpdate();
 
     };
-
-    const deleteCar = (event) => {
-      event.preventDefault(event);
-      carList.clear();
-      this.forceUpdate();
-    };
-
-    const openMap = (event) => {
-      event.preventDefault(event);
-      ReactDOM.render(
-        <ParkingMap/>,
-        document.getElementById('root')
-      );
-    }
 
     return(
       <div>
