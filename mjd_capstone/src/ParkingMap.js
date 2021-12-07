@@ -3,11 +3,11 @@ import map from './prototype_map.png';
 import './map.css'
 import Navbar from './NavBar.js';
 
-function Map() {
+function ParkingMap(props) {
   return (
     <div>
     <div>
-      <Navbar/>
+      <Navbar edits={props.edits}/>
     </div>
     <div>
       <img src={map} classname="mapImage" alt="Map"></img>
@@ -16,4 +16,4 @@ function Map() {
   );
 }
  
-export default Map;
+export default ParkingMap;

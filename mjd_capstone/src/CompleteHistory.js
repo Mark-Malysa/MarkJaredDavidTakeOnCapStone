@@ -8,7 +8,7 @@ const CompleteHistory = (props) => {
     return (  
         <div>
         <div>
-        <NavBar/>
+        <NavBar edits={props.edits}/>
         </div>
         <div className="App">
             
@@ -28,8 +28,8 @@ const CompleteHistory = (props) => {
                 <td>{edit.make_model}</td>
                 <td>{edit.key}</td>
                 <td>{edit.stockNum}</td>
-                <td>{edit.old}</td>
-                <td>{edit.location}</td>
+                <td>{edit.oldSpot}</td>
+                <td>{edit.newSpot}</td>
                 <td>{edit.time}</td>
             </tr>
             ))}

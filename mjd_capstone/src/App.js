@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './App.css';
-import ParkingMap from './Map';
+import ParkingMap from './ParkingMap';
 import { Container } from './Container';
 import NavBar from "./NavBar"
 import 'materialize-css/dist/css/materialize.min.css';

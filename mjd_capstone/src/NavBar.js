@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Container } from './Container';
 import './NavBar.css'
 import App from './App';
-import ParkingMap from './Map';
+import ParkingMap from './ParkingMap';
 import CompleteHistory from './CompleteHistory'
 import Login from './Login'
 import 'materialize-css/dist/css/materialize.min.css';
@@ -17,7 +17,7 @@ const Navbar = (props) => {
   const openMap = (event) => {
     event.preventDefault(event)
     ReactDOM.render(
-      <ParkingMap/>,
+      <ParkingMap edits={props.edits}/>,
       document.getElementById('root')
     );
   }
