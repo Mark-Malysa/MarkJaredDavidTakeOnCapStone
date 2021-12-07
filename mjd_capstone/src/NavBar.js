@@ -50,10 +50,10 @@ const Navbar = (props) => {
     <header>
     <nav>
       <div class="nav-wrapper">
-        <a href="/" class="brand-logo">Paul Miller INC.</a>
+        <a href="/" onClick={goHome} class="brand-logo">Paul Miller INC.</a>
         <a href="/" data-target="mobile-nav" class="sidenav-trigger"></a>
         <ul id="desktop-nav" class="right hide-on-med-and-down">
-          <li><button class="navigate" onClick={goHome}>Home</button> </li>
+          <li><button class="navigate" onClick={goHome}>Home</button></li>
           <li><button class="navigate" onClick={openMap} >Map</button></li>
           <li><button class="navigate" onClick={openHistory}>Show Edit History (Administrative mode only)</button></li>
           <li class="btn" onClick={logOut}>Log Out</li>
