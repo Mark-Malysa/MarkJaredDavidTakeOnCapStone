@@ -6,27 +6,30 @@ import ParkingMap from './Map';
 import { Container } from './Container';
 import NavBar from "./NavBar"
 import 'materialize-css/dist/css/materialize.min.css';
-import ActionMenu from './ActionMenu'
+import ActionMenu from './ActionMenu';
 
 
 let carList = [];
-let carmap = new Map();
-carmap.set(5424562089345, {make_model:"test", location: "test"})
+let edits = [];
 
 class App extends Component{
-  render(user) {
+  render() {
 
     const addCar = (event) => {
       event.preventDefault(event);
       //carList.push({make_model:event.target.make_model.value, vin:parseInt(event.target.vin.value), location:event.target.location.value});
-      let newCar = {
+      let listEdit = {
+        type: "New Car",
         key: event.target.vin.value,
         make_model: event.target.make_model.value,
-        location:event.target.location.value,
-        stockNum: event.target.stockNumber.value
+        stockNum: event.target.stockNumber.value,
+        newSpot: event.target.location.value,
+        oldSpot: "N/A",
+        time: Date().toLocaleString()
       };
-      console.log(newCar);
-      carList.push(newCar);
+      console.log(listEdit);
+      carList.push(listEdit);
+      edits.push(listEdit);
       console.log(carList);
       this.forceUpdate();
 
@@ -49,7 +52,7 @@ class App extends Component{
     return(
       <div>
       <div>
-      <NavBar/>
+      <NavBar edits={edits}/>
       </div>
       <div className="App">
 
@@ -67,7 +70,7 @@ class App extends Component{
           <tr key= {car.key}>
             <td>Action Menu</td>
             <td>{car.make_model}</td>
-            <td>{car.location}</td>
+            <td>{car.newSpot}</td>
             <td>{car.key}</td>
             <td>{car.stockNum}</td>
             <td><button class="listedButton">Show on Map</button></td>

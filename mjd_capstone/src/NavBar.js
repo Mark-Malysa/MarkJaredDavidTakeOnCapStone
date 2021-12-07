@@ -11,7 +11,7 @@ let logins = new Map();
 logins.set("admin", {password:"admin", isAdmin:true});
 logins.set("user", {password:"user", isAdmin:false});
  
-const Navbar = () => {
+const Navbar = (props) => {
 
   const openMap = (event) => {
     event.preventDefault(event)
@@ -35,7 +35,7 @@ const Navbar = () => {
   const openHistory = (event) => {
     event.preventDefault(event)
     ReactDOM.render(
-      <CompleteHistory/>,
+      <CompleteHistory edits={props.edits}/>,
       document.getElementById('root')
     );
   }
