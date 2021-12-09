@@ -15,7 +15,7 @@ const CompleteHistory = (props) => {
             <table>
             <tr> 
                 <th>Edit Type</th>
-                <th>Car Make/Model</th>
+                <th>Make/Model</th>
                 <th>VIN</th>
                 <th>Stock Number</th>
                 <th>Old Location</th>
