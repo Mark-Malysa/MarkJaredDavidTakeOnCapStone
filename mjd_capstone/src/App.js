@@ -22,7 +22,7 @@ class App extends Component{
         type: "Delete Car",
         key: car.key,
         make_model: car.make_model,
-        stockNum: car.stockNumber,
+        stockNum: car.stockNum,
         newSpot: "N/A",
         oldSpot: car.newSpot,
         time: Date().toLocaleString()
@@ -61,9 +61,9 @@ class App extends Component{
           <tr>
             <th>Action</th>
             <th>Make/Model</th>
-            <th>Location</th>
             <th>Vin</th>
             <th>Stock Number</th>
+            <th>Location</th>
             <th></th>
           </tr>
           {carList.map((car =>
